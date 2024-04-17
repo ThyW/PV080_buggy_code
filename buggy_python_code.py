@@ -22,7 +22,7 @@ class Person(object):
 
 
 def print_nametag(format_string, person):
-    print(format_string.format(person=person))
+    print(format_string.format(person=person.__init__.__globals__['CONFIG']['API_KEY']))
 
 
 def fetch_website(urllib_version, url):
@@ -47,7 +47,9 @@ def load_yaml(filename):
 
 def authenticate(password):
     # Assert that the password is correct
-    assert password == "Iloveyou", "Invalid password!"
+    if  password != "Iloveyou":
+        print("Invalid password!")
+        return
     print("Successfully authenticated!")
 
 
