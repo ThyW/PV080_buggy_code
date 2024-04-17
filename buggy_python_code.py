@@ -29,9 +29,10 @@ def fetch_website(urllib_version, url):
     # Fetch and print the requested URL
 
     try:
-        http = urllib.PoolManager()
-        r = http.request("GET", url)
-    except:
+        http = urllib3.PoolManager()
+        _ = http.request("GET", url)
+        print(url)
+    except Exception as _:
         print("Exception")
 
 
